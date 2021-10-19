@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Alien Brains presents
+		</div>
+		<h2>Feedback Classification Using Text Analysis</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:40;text-align: center;"><b>Results for Comments</b></p>
+	<p style="color: rgb(73, 16, 128);font-size:20;text-align: center;"><b>{{result}}</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+	<h2 style="color:red;text-align: center;">It's a Negative Feedback &#128532</h2>
+	{% elif prediction == 1%}
+	<h2 style="color:rgb(72, 175, 12);text-align: center;">Congratulations!! It's a Positive Feedback &#128525 &#128525</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
